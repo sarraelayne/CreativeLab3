@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>
+        <script src="recs.js"></script>
+        <link rel="stylesheet" type="text/css" href="recs.css">
+    </head>
+    <body>
+        <form name='userForm' ng-submit='recsSearch(userForm)'>
+            <input placeholder='Band' ng-model='userForm.band'/>
+            <input placeholder='Movie' ng-model='userForm.movie'/>
+            <button type='submit'>Search</button>
+        </form>
+    </body>
+</html>
