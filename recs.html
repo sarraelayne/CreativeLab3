@@ -1,19 +1,24 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>
-        <script src="recs.js"></script>
-        <link rel="stylesheet" type="text/css" href="recs.css">
-    </head>
-    <body>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>
+    <script src="recs.js"></script>
+    <link rel="stylesheet" type="text/css" href="recs.css">
+</head>
+
+<body>
+    <div ng-app='app' ng-controller='mainCtrl'>
         <form name='userForm' ng-submit='recsSearch(userForm)'>
-            <input placeholder='Band' ng-model='userForm.band'/>
-            <input placeholder='Movie' ng-model='userForm.movie'/>
+            <input placeholder='Band' ng-model='userForm.band' />
+            <input placeholder='Movie' ng-model='userForm.movie' />
             <button type='submit'>Search</button>
         </form>
-        
-        <div ng-repeat="user in users"> 
+
+        <div ng-repeat="user in users">
             Suggestions for: {{user.band}} with: {{user.movie}};
         </div>
-    </body>
+    </div>
+</body>
+
 </html>

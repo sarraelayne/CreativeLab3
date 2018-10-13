@@ -3,12 +3,24 @@ angular.module('app', [])
     .directive('recs', recsDirective);
     
     
-function mainCtrl ($scope) {
+function mainCtrl ($scope, $http) {
     
     $scope.recsSearch = function(user) {
+        // $scope.recsSearch.preventDefault();
         
-    }
+        var baseURL = "https://tastedive.com/api/similar?k=321657-Angular2-0PYPIS84&verbose=1&q=";
+        var separator = "%2C";
+        var band = user.band.replace(/ /g, "+");
+        var movie = user.movie.replace(/ /g, "+");
+        
+        var completedURL = baseURL + band + separator + movie;
+        console.log("API endpoint: " + completedURL);
+        $http.get(completedURL).success(function(response) {
+            console.log("response: \n\n" + response);
+        });
+    };
 }
+
 
 function recsDirective () {
     return {
