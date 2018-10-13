@@ -11,5 +11,9 @@
             <input placeholder='Movie' ng-model='userForm.movie'/>
             <button type='submit'>Search</button>
         </form>
-    </body>{{band}}
+        
+        <div ng-repeat="user in users"> 
+            Suggestions for: {{user.band}} with: {{user.movie}};
+        </div>
+    </body>
 </html>
