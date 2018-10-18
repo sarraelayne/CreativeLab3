@@ -19,8 +19,8 @@
             <button type='submit'>Search</button>
         </form>
 
-        <div ng-repeat="user in users">
-            Suggestions for: {{form.band}} with: {{form.movie}};
+        <div class="card" ng-repeat='rec in recs' ng-click="clicked">
+                <recs rec ='rec'/>
         </div>
     </div>
 </body>
