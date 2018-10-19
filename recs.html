@@ -4,6 +4,7 @@
 <head>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.2/angular.js"></script>
     <script src="recs.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="recs.css">
 </head>
 
@@ -12,6 +13,7 @@
 </head>
 
 <body>
+    <h1>Get a recommendation</h1>
     <div ng-app='myApp' ng-controller='myCtrl'>
         <form name='form' ng-submit='recsSearch(form)'>
             <input placeholder='Band' ng-model='form.band' />
